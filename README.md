@@ -7,7 +7,7 @@
 First, clone the repo via git:
 
 ```bash
-git clone https://github.mosaic.sec.samsung.net/jabez-park/electron-react-boilerplate.git your-project-name
+git clone https://github.com/BookyPie/electron-react-boilerplate.git your-project-name
 ```
 
 And then install dependencies.
