@@ -1,0 +1,68 @@
+{
+  "name": "electron-react-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for Live editing development on Electron with React.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ./app/main.js",
+    "dev": "cross-env HOT=1 babel-node ./index.js --start-hot",
+    "build": "babel-node ./node_modules/webpack/bin/webpack",
+    "package": "build --publish never",
+    "package-all": "npm run build && build -mwl",
+    "package-linux": "npm run build && build --linux",
+    "package-mac": "npm run build && build --mac",
+    "package-win": "build --win --x64"
+  },
+  "author": {
+    "name": "Junseong Park",
+    "email": "js@kweiza.com"
+  },
+  "license": "ISC",
+  "build": {
+    "appId": "com.exam.electron-react-boilerplate",
+    "category": "public.app-category.tools",
+    "files": [
+      "node_modules/",
+      "bundle.js",
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "CSC_IDENTITY_AUTO_DISCOVERY": true
+    },
+    "nsis": {
+      "oneClick": true
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.tools"
+    },
+    "dmg": { }
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.1",
+    "electron": "^1.4.12",
+    "electron-builder": "^10.7.1",
+    "express": "^4.14.0",
+    "node-sass": "^4.0.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "electron-react-boilerplate",
+  "productName": "electron-react-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate for Live editing development on Electron with React.js",
+  "main": "./main.js",
+  "author": {
+    "name": "Junseong Park",
+    "email": "js@kweiza.com"
+  },
+  "license": "ISC"
+}
